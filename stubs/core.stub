@@ -328,3 +328,17 @@ function ltrim(string $string, string $characters = " \n\r\t\v\x00"): string {}
  * @return ($string is lowercase-string ? lowercase-string : string)
  */
 function rtrim(string $string, string $characters = " \n\r\t\v\x00"): string {}
+
+/**
+ * @param array|string $command
+ * @param array $descriptor_spec
+ * @param array &$pipes
+ * @param string|null $cwd
+ * @param array|null $env_vars
+ * @param array|null $options
+ *
+ * @param-out string $pipes
+ *
+ * @return resource|false
+ */
+function proc_open(array|string $command, array $descriptor_spec, &$pipes, ?string $cwd, ?array $env_vars, ?array $options) {}
